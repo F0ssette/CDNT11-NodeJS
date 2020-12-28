@@ -1,7 +1,7 @@
+const { response } = require('express');
 const express = require('express')
 const app = express()
 const port = 3000
-const { v4: uuidv4 } = require('uuid');
 let orders =require('./orders')
 
 app.get('/', (req, res) => {
@@ -13,3 +13,7 @@ app.listen(port, () => {
 })
 
 app.use('/orders', orders)
+
+app.use('', (req, res) => {
+  res.send('Error 404, page not found')
+})

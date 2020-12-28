@@ -27,9 +27,9 @@ router.post('/new', function(req, res) {
     res.send(uuidv4())
 })
 
-// router.put('/edit/:id', function(req, res) {
-//     res.send(req.params.id)
-// })
+router.put('/edit/:id', function(req, res) {
+    res.send(req.params.id)
+})
 
 router.delete('/delete/:id', function(req, res) {
     let id = req.params.id
